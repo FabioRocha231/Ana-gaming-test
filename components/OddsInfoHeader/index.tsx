@@ -26,11 +26,11 @@ export const OddsInfoHeader = ({ eventOdds }: OddsInfoHeaderProps) => {
 
           <div className="flex items-center space-x-4">
             <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center text-2xl font-bold">
-              {eventOdds.away_team.slice(0, 3)}
+              {eventOdds.away_team?.slice(0, 3)}
             </div>
             <div className="text-2xl font-bold">@</div>
             <div className="w-16 h-16 bg-red-700 rounded-full flex items-center justify-center text-2xl font-bold">
-              {eventOdds.home_team.slice(0, 3)}
+              {eventOdds.home_team?.slice(0, 3)}
             </div>
           </div>
 

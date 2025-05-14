@@ -25,7 +25,7 @@ function groupByPlayer(outcomes: any[]) {
 }
 
 export const OddsCard = ({ eventOdds }: OddsCardProps) => {
-  return eventOdds.bookmakers.map(bookmaker => (
+  return eventOdds.bookmakers?.map(bookmaker => (
     <div
       key={bookmaker.key}
       className="bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-700"

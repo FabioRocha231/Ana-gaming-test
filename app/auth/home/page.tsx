@@ -1,14 +1,9 @@
 import { SportsResponseData } from '@/app/api/sports/route';
 import { Events } from '@/components/events';
 import { SideBar } from '@/components/SideBar';
-import { Session } from 'next-auth';
-
-type Props = {
-  session: Session | null;
-};
 export default async function Home() {
   const sports: SportsResponseData = await fetch(
-    'http://localhost:3000/api/sports'
+    `${process.env.VERCEL_URL}/api/sports`
   )
     .then(res => {
       return res.json();
@@ -16,8 +11,15 @@ export default async function Home() {
     .catch(err => {
       console.log(err);
     });
+
+  if (!sports) {
+    return (
+      <div>Houve um erro ao buscar os dados tente novamente mais tarde</div>
+    );
+  }
+
   return (
-    <div className="flex flex-row items-center justify-center h-screen max-w-5xl">
+    <div className="flex flex-row gap-2 justify-center h-screen">
       <SideBar sports={sports} />
       <Events />
     </div>
