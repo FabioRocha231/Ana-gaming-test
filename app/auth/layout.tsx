@@ -10,7 +10,7 @@ export default async function AuthLayout({
   const session = await getServerSession();
   if (!session) redirect('/');
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <Navbar />
       {children}
     </div>

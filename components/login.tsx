@@ -17,7 +17,7 @@ export const LoginComponent = () => {
       <button className="btn btn-neutral mt-4">Login</button>
 
       <div className="flex flex-col items-center">
-        <p className="text-sm">Or continue with</p>
+        <p className="text-sm my-2">Or continue with</p>
         <button
           className="btn bg- mt-4"
           onClick={() => signIn('github', { callbackUrl: '/auth/home' })}
