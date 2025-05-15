@@ -1,11 +1,10 @@
 import { EventOddsType } from '@/app/api/event-odds/route';
 import { OddsCard } from '@/components/OddsCard';
 import { OddsInfoHeader } from '@/components/OddsInfoHeader';
-import { formatDate } from '@/lib/utils';
 import { redirect } from 'next/navigation';
 import React from 'react';
 type Props = {
-  searchParams: { [key: string]: string | string[] | undefined };
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 export default async function OddsPage({ searchParams }: Props) {
   const params = await searchParams;
@@ -39,7 +38,4 @@ export default async function OddsPage({ searchParams }: Props) {
       </div>
     </div>
   );
-}
-function formatOdds(price: number) {
-  return price > 0 ? `+${price}` : price.toString();
 }
