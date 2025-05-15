@@ -3,7 +3,7 @@ import { Events } from '@/components/events';
 import { SideBar } from '@/components/SideBar';
 export default async function Home() {
   const sports: SportsResponseData = await fetch(
-    `${process.env.VERCEL_URL}/api/sports`
+    `${process.env.NEXT_PUBLIC_SELF_BASE_URL}/api/sports`
   )
     .then(res => {
       return res.json();

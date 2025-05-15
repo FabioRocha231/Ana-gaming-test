@@ -14,7 +14,7 @@ export default async function OddsPage({ searchParams }: Props) {
   if (!eventId || !selectedSport) redirect('/auth/home');
 
   const eventOdds: EventOddsType = await fetch(
-    `${process.env.VERCEL_URL}/api/event-odds?event-id=${eventId}&sport=${selectedSport}`
+    `${process.env.NEXT_PUBLIC_SELF_BASE_URL}/api/event-odds?event-id=${eventId}&sport=${selectedSport}`
   )
     .then(res => {
       return res.json();
