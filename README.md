@@ -34,13 +34,14 @@ Este projeto é uma aplicação web desenvolvida com **Next.js 15+**, **TypeScri
    A aplicação estará disponível em `http://localhost:3000`.
 
 4. **Variaveis de ambiente:**
-   GITHUB_ID= Id do app fornecido pelo github
+   ```GITHUB_ID= Id do app fornecido pelo github
    GITHUB_SECRET= secret do app fornecido pelo github
    NEXTAUTH_URL=http://localhost:3000
    NEXTAUTH_SECRET= cole um uuid v4 aqui
    ODDS_API_URL=https://api.the-odds-api.com
    ODDS_API_KEY= key fornecida pela api acima
    NEXT_PUBLIC_SELF_BASE_URL=http://localhost:3000
+   ```
 
 ## 🧪 Executando os Testes
 
