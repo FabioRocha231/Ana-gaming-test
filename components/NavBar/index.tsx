@@ -1,11 +1,14 @@
 'use client';
 import { signOut } from 'next-auth/react';
+import Link from 'next/link';
 
 export const Navbar = () => {
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl">Ana Gaming</a>
+        <Link href="/auth/home" className="btn btn-ghost text-xl">
+          Ana Gaming
+        </Link>
       </div>
       <div className="flex-none">
         <div className="dropdown dropdown-end">
@@ -25,15 +28,6 @@ export const Navbar = () => {
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            <li>
-              <a className="justify-between">
-                Profile
-                <span className="badge">New</span>
-              </a>
-            </li>
-            <li>
-              <a>Settings</a>
-            </li>
             <li>
               <a onClick={() => signOut()}>Logout</a>
             </li>
