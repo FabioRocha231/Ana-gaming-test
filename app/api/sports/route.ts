@@ -13,7 +13,7 @@ export type SportsResponseData = {
     }>;
   };
 };
-// const response = [
+
 //   {
 //     key: 'americanfootball_ncaaf',
 //     group: 'American Football',
