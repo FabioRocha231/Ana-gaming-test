@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-type Outcome = {
+export type Outcome = {
   name: string;
   description: string;
   price: number;

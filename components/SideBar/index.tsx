@@ -34,24 +34,6 @@ export const SideBar = ({ sports }: sideBarProps) => {
                 </ul>
               </details>
             </li>
-
-            // <div key={groupName}>
-            //   <h1 className="text-xs">{groupName}</h1>
-            //   <ul>
-            //     {games.map(game => {
-            //       return (
-            //         <li key={game.key}>
-            //           <p
-            //             className="text-base cursor-pointer hover:text-blue-500"
-            //             onClick={() => setSelectedSport(game.key)}
-            //           >
-            //             {game.title}
-            //           </p>
-            //         </li>
-            //       );
-            //     })}
-            //   </ul>
-            // </div>
           );
         })}
       </ul>

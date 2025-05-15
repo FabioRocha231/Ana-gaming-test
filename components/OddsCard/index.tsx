@@ -1,4 +1,4 @@
-import { EventOddsType } from '@/app/api/event-odds/route';
+import { EventOddsType, Outcome } from '@/app/api/event-odds/route';
 import { OddsCardHeader } from './Header';
 
 type OddsCardProps = {
@@ -8,8 +8,8 @@ function formatOdds(price: number) {
   return price > 0 ? `+${price}` : price.toString();
 }
 
-function groupByPlayer(outcomes: any[]) {
-  const players: Record<string, any[]> = {};
+function groupByPlayer(outcomes: Outcome[]) {
+  const players: Record<string, Outcome[]> = {};
 
   outcomes.forEach(outcome => {
     if (!players[outcome.description]) {
