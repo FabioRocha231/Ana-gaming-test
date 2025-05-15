@@ -4,14 +4,6 @@ import '@testing-library/jest-dom';
 import { signOut } from 'next-auth/react';
 import { Navbar } from '.';
 
-jest.mock('next/image', () => (props: any) => {
-  return <img {...props} />;
-});
-
-jest.mock('next/link', () => {
-  return ({ children, href }: any) => <a href={href}>{children}</a>;
-});
-
 jest.mock('next-auth/react', () => ({
   signOut: jest.fn(),
 }));
